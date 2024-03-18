@@ -1,0 +1,184 @@
+
+
+
+/* tablets*/
+
+@media (max-width:700px){
+     .navbar-menu a{
+        padding-block: 16px;
+    }
+  /*menu hamburger*/
+.hamburger{
+    display: block;
+    border: none;
+    background: none;
+    border-top: 3px solid #252525;
+    cursor: pointer;
+    z-index: 1;
+    margin-right: -500px;
+    
+    }
+    .hamburger::before,
+    .hamburger::after{
+        content: "";
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: #252525;
+        margin-top: 5px;
+    }
+ 
+    .nav-list{
+        position:fixed;
+        top:0;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #f1f5f7;
+        display: flex;
+        flex-direction: column;       
+        align-items: center; 
+        justify-content: space-evenly;
+        gap: 0;
+        pointer-events: none;
+        clip-path: circle(100px at 90% -15%);
+        transition: 0.3s ease-out;
+
+    }
+    .nav-list a{
+        font-size: 20px;
+        font-weight: 800;
+        opacity: 0;
+    }
+    .nav-list li:nth-child(1) a{
+        transition: 0.5s 0.2s;
+    }
+    .nav-list li:nth-child(2) a{
+        transition: 0.5s 0.4s;
+
+    }
+    .nav-list li:nth-child(3) a{
+        transition: 0.5s 0.6s;
+
+    }
+    .nav-list li:nth-child(4) a{
+        transition: 0.5s 0.7s;
+
+    }
+
+    /*estilos ativos*/
+    .nav.active .nav-list{
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+
+    }
+    .nav.active .nav-list a{
+        opacity: 1;
+    }
+    
+
+   
+
+    /*rodapé*/
+    footer{
+    display: flex;
+    flex-wrap: wrap;
+    
+    }
+    .img-footer{
+        width: 50%;
+
+    }
+    .institucional{
+        margin-bottom: 20px;
+        width: 50%;
+    }
+    .institucional li{
+        padding-bottom:10px;
+
+    }
+    .contato-footer{
+        margin-bottom: 20px;
+        width: 50%;
+
+    }
+    .contato-footer li{
+        padding-bottom:10px;
+    }
+    .social-footer{
+        width: 50%;
+
+    }
+    .social-footer i{
+        margin-top: 8px;
+        padding: 10px;
+   }
+}
+
+
+/* celulares*/
+@media (max-width:500px){
+
+h1{
+    font-size: 32px;
+}
+h2{
+    font-size: 24px;
+}
+p{
+    font-size: 13px;
+}
+.nav{
+    padding-top: 10px;
+}
+.hamburger{
+    margin-right: -200px;
+}
+
+
+.navbar-menu a{
+    padding-block: 16px;
+}
+main{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    text-align: center;
+    height: 450px;
+}
+.container-1{
+    width: 100%;
+    margin-top: 20px;
+}
+.container-2{
+display: none;
+    
+}
+
+.container-sobre{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 40px;
+    box-shadow: 5px 2px 25px -1px rgba(27, 27, 27, 0.076);
+    
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.institucional{
+    text-align: center;
+}
+.social-footer i{
+    width: 30px;
+    
+}
+}
